@@ -1,0 +1,1 @@
+# 2026-fwdays-rules-commands-skills-practice
