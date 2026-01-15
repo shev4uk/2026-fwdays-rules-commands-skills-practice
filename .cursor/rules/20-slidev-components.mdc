@@ -1,0 +1,10 @@
+---
+description: Slidev components and snippets rules
+globs:
+  - slidev/components/**/*.vue
+  - slidev/snippets/**/*.{ts,js,vue}
+---
+- Prefer `script setup` in Vue components and keep them presentation-focused.
+- Keep components small and reusable; avoid global side effects.
+- For snippets, keep examples self-contained and aligned with slide narratives.
+- Use TypeScript in snippets when possible for clarity and correctness.

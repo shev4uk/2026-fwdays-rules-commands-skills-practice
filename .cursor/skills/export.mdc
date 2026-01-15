@@ -1,0 +1,55 @@
+---
+description: Export Slidev deck to PDF and other formats
+---
+
+# Slidev Export Skill
+
+Use the Slidev CLI to export your deck to PDF (or other formats) for sharing and delivery.
+
+## Primary command (repo default)
+
+From the `slidev/` folder:
+
+```
+npm run export -- --format pdf
+```
+
+This uses the local `@slidev/cli` and exports the deck defined by `slides.md`.
+
+## Export options (detailed)
+
+`slidev export [entry]`
+
+- `[entry]` (default: `slides.md`): Path to the markdown file containing slides.
+- `--output`: Output path. Defaults to `exportFilename` (frontmatter) or `[entry]-export`.
+- `--format`: Output format. Supported values: `pdf`, `png`, `pptx`, `md`. Default: `pdf`.
+- `--timeout`: Print-page render timeout in ms. Default: `30000`.
+- `--range`: Page ranges to export, e.g. `1,4-5,6`.
+- `--dark`: Export in dark theme mode.
+- `--with-clicks` / `-c`: Export pages for every click animation.
+- `--theme` / `-t`: Override theme.
+- `--omit-background`: Remove default browser background.
+
+## Examples
+
+Export to PDF with a custom output name:
+
+```
+npm run export -- --format pdf --output rules-commands-skills.pdf
+```
+
+Export only selected slides:
+
+```
+npm run export -- --range "1,4-5,6"
+```
+
+Export with click animations:
+
+```
+npm run export -- --with-clicks
+```
+
+## Reference
+
+- https://sli.dev/builtin/cli#export

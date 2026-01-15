@@ -1,0 +1,54 @@
+---
+description: Deploy Slidev slides to GitHub Pages using GitHub Actions
+---
+
+# Deploy Slides to GitHub Pages
+
+Автоматичний деплой Slidev презентації на GitHub Pages через GitHub Actions.
+
+## Як це працює
+
+1. **Workflow файл:** `.github/workflows/deploy.yml`
+   - Запускається при push в `main`/`master`
+   - Можна запустити вручну через `workflow_dispatch`
+
+2. **Процес деплою:**
+   - Встановлює Node.js та залежності
+   - Білдить слайди через `npm run build`
+   - Деплоїть `slidev/dist` на GitHub Pages
+
+## Налаштування GitHub Pages
+
+1. Перейдіть в **Settings** → **Pages**
+2. У **Source** виберіть **GitHub Actions**
+3. Після першого деплою слайди будуть доступні за URL:
+   ```
+   https://<username>.github.io/<repository-name>/
+   ```
+
+## Локальна перевірка
+
+Перед деплоєм перевірте білд локально:
+
+```bash
+cd slidev
+npm run build
+```
+
+Перегляньте результат в `slidev/dist/`:
+
+```bash
+cd slidev/dist
+npx serve .
+```
+
+## Troubleshooting
+
+- **404 помилка:** Перевірте, що GitHub Pages налаштований на GitHub Actions
+- **Білд падає:** Перевірте логи в Actions tab
+- **Слайди не оновлюються:** Зачекайте кілька хвилин, GitHub Pages може кешувати
+
+## Reference
+
+- [GitHub Actions для Pages](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site#publishing-with-a-custom-github-actions-workflow)
+- [Slidev Build](https://sli.dev/guide/hosting.html#build)

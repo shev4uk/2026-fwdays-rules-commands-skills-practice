@@ -1,0 +1,9 @@
+---
+description: General project guidance
+alwaysApply: true
+---
+- Primary deliverable is the Slidev workshop deck under `slidev/`.
+- Use `docs/PRD.md` as the source of truth for scope, goals, and audience.
+- Keep edits minimal and focused; do not reformat unrelated content.
+- Avoid touching `slidev/package-lock.json` unless dependencies change.
+- Preserve existing tone and formatting conventions in files you edit.

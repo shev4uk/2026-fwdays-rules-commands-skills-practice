@@ -1,0 +1,8 @@
+---
+description: Documentation rules
+globs:
+  - docs/**/*.md
+---
+- Keep docs concise and structured with clear headings.
+- Reflect any scope changes in `docs/PRD.md` before updating slides.
+- Use consistent terminology: rules, commands, skills.

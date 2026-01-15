@@ -1,0 +1,11 @@
+---
+description: Slidev markdown rules
+globs:
+  - slidev/**/*.md
+---
+- Maintain Slidev slide separators with `---` between slides.
+- Keep per-slide frontmatter minimal and only when needed.
+- Use short, scannable bullets; avoid dense paragraphs.
+- Use speaker notes in the final HTML comment block of a slide when needed.
+- When referencing code, prefer `slidev/snippets` and `<<< @/snippets/...` embeds.
+- Preserve `mdc: true` in the main frontmatter unless explicitly changing syntax mode.
